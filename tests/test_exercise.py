@@ -2,5 +2,6 @@ import pytest
 import src.exercise
 
 def test_exercise():
-    #implement tests here
-    assert 0 == 0
+    main()
+    out, err = capsys.readouterr()
+    assert out == "In a\nworld\n"
